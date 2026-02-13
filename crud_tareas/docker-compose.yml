@@ -20,7 +20,7 @@ services:
     restart: unless-stopped
     environment:
       MYSQL_DATABASE: laravel_tasks
-      MYSQL_ROOT_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: secret
       MYSQL_USER: laravel
       MYSQL_PASSWORD: secret
     ports:
@@ -35,8 +35,8 @@ services:
     environment:
       PMA_HOST: mysql
       PMA_PORT: 3306
-      PMA_USER: root
-      PMA_PASSWORD: root
+      PMA_USER: laravel
+      PMA_PASSWORD: secret
     ports:
       - "8080:80"
     depends_on:
